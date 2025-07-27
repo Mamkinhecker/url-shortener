@@ -22,7 +22,7 @@ type HTTPServer struct {
 func Mustload() *Config {
 	configPath := os.Getenv("./config/local.yaml./your-app")
 	if configPath == "" {
-		configPath = "config/config.yaml"
+		configPath = "config/local.yaml"
 		log.Printf("Using default config path: %s", configPath)
 	}
 	if _, err := os.Stat(configPath); err != nil {
