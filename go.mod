@@ -1,4 +1,4 @@
-module github.com/Mamkinhecker/url-shortener
+module url-shortener
 go 1.23.0
 
 toolchain go1.23.11
