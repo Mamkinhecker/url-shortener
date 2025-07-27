@@ -20,9 +20,10 @@ type HTTPServer struct {
 }
 
 func Mustload() *Config {
-	configPath := os.Getenv("CONFIG_PATH")
+	configPath := os.Getenv("./config/local.yaml./your-app")
 	if configPath == "" {
-		log.Fatal("CONFIG_PATH environment variable is not set")
+		configPath = "config/config.yaml"
+		log.Printf("Using default config path: %s", configPath)
 	}
 	if _, err := os.Stat(configPath); err != nil {
 		log.Fatalf("error opening config file %s", err)
